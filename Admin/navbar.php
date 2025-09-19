@@ -13,6 +13,7 @@ if(isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin'):
             <a href="dashboard.php">Home</a>
             <a href="attendanceReports.php">Records</a>
             <a href="studentsList.php">Students</a>
+            <a href="manageExcuses.php">Excuse Letters</a>
             <a href="../handle/handleForms.php?logoutUserBtn=1">Logout</a>
         </div>
     </nav>
