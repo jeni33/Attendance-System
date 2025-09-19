@@ -43,3 +43,15 @@ CREATE TABLE attendance (
 
 INSERT INTO users (full_name, email, password, role) 
 VALUES ('System Admin', 'admin@example.com', MD5('admin123'), 'admin');
+
+CREATE TABLE excuse_letters (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    course VARCHAR(100) NOT NULL,
+    year_level VARCHAR(50) NOT NULL,
+    reason TEXT NOT NULL,
+    photo VARCHAR(255) DEFAULT NULL,
+    date_submitted DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('Pending','Approved','Rejected') DEFAULT 'Pending',
+    FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE CASCADE
+);
