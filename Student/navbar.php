@@ -13,6 +13,7 @@ if(isset($_SESSION['user']) && $_SESSION['user']['role'] === 'student'):
             <a href="dashboard.php">Home</a>
             <a href="profile.php">Profile</a>
             <a href="viewAttendance.php">History</a>
+            <a href="submitExcuse.php">Excuse Letter</a> 
             <a href="../handle/handleForms.php?logoutUserBtn=1">Logout</a>
         </div>
     </nav>
